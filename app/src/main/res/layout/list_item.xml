@@ -5,13 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/CardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:cardCornerRadius="15dp"
         android:layout_margin="10dp"
         android:clickable="true"
@@ -19,63 +18,63 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:gravity="center">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/gambar"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:adjustViewBounds="true"
                 android:layout_marginTop="20dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"
+                />
 
             <TextView
                 android:id="@+id/nama_produk"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:lines="2"
                 android:text="TextView"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/satuan"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:gravity="center"
                 android:textSize="14sp"
-                android:lines="1"
-                android:layout_marginTop="5dp" />
+                android:lines="1" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:text="ORDER"
-                android:layout_marginTop="10dp"
-                android:textColor="@android:color/white"/>
+               />
 
             <TextView
                 android:id="@+id/harga_member"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:lines="1"
                 android:text="TextView"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginBottom="20dp"/>
+
+
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+
+
 
 </LinearLayout>
