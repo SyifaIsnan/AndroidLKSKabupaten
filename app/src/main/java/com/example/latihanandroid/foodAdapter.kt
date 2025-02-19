@@ -3,6 +3,7 @@ package com.example.latihanandroid
 import android.app.Activity
 import android.content.Context
 import android.graphics.BitmapFactory
+import java.util.Currency
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.net.HttpURLConnection
 import java.net.URL
+import java.text.NumberFormat
+import java.util.Locale
 
 class foodAdapter(val context: Context, val foodList: MutableList<foodModel>): RecyclerView.Adapter<foodAdapter.ViewHolder>(){
 
@@ -43,8 +46,13 @@ class foodAdapter(val context: Context, val foodList: MutableList<foodModel>): R
                 val resources = context.resources
                 holder.gambar.setImageBitmap(gambar)
                 holder.nama_produk.text = food.nama_produk
-                holder.satuan.text = food.satuan
-                holder.harga_member.text = food.harga_member
+                holder.satuan.text = "SATUAN " + food.satuan
+
+                val indo = Locale("in" , "ID")
+                val formatter = NumberFormat.getCurrencyInstance()
+                formatter.currency = Currency.getInstance(indo)
+                val hargaFormat = formatter.format(food.harga_member.toInt())
+                holder.harga_member.text = hargaFormat
 
             }
         }

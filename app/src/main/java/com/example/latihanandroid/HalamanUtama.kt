@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.helper.widget.Grid
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.latihanandroid.databinding.ActivityHalamanUtamaBinding
@@ -38,6 +39,8 @@ class HalamanUtama : AppCompatActivity() {
 
         val foodList = mutableListOf<foodModel>()
 
+        binding.progressBar.isVisible = true
+
         lifecycleScope.launch(Dispatchers.IO) {
             try {
                 val koneksi = URL("https://wahanasuksesbersama.id/lks/produkview.php").openConnection() as HttpURLConnection
@@ -63,6 +66,7 @@ class HalamanUtama : AppCompatActivity() {
                     withContext(Dispatchers.Main){
                         binding.RecyclerView.layoutManager = GridLayoutManager(this@HalamanUtama, 2)
                         binding.RecyclerView.adapter = foodAdapter(this@HalamanUtama, foodList)
+                        binding.progressBar.isVisible = false
                     }
                 }
             }

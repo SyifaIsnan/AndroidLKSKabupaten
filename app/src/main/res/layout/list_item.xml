@@ -23,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/gambar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:layout_marginTop="20dp"
@@ -55,6 +55,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:text="ORDER"
+                android:drawableLeft="@drawable/baseline_add_shopping_cart_24"
                />
 
             <TextView

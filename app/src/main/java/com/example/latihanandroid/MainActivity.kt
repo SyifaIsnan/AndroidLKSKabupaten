@@ -23,8 +23,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
+
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(
+            binding.toolbarLogin
+        )
 
         binding.button.setOnClickListener{
 
