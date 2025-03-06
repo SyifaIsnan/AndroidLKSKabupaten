@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ungu_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLogin"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Login Aplikasi!"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_marginBottom="40dp"
+            android:layout_width="119dp"
+            android:layout_height="145dp"
+
+            app:srcCompat="@drawable/baseline_account_circle_24" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="298dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="20dp"
+
+            android:drawableStart="@drawable/baseline_account_circle_24"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="301dp"
+            android:layout_height="59dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/baseline_front_hand_24"
+
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lali Password? hubungi admin..."
+            android:layout_marginLeft="85dp"
+            android:layout_marginBottom="30dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:text="MASUK"
+            android:layout_marginBottom="60dp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
